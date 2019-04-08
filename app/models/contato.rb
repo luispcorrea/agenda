@@ -1,4 +1,8 @@
 class Contato < ApplicationRecord
-	validates_presence_of :nome
-    validates_presence_of :celular
+	validates :celular, numericality: true
+	validates :celular, presence: true
+	validates :nome, presence: true
+	validates :nome, uniqueness: true, on: :create
+	validates :celular, uniqueness: true, on: :create
+
 end
