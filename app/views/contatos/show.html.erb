@@ -15,5 +15,15 @@
   <%= @contato.celular %>
 </p>
 
+<p>
+  <strong>Foto contato:</strong>
+
+</br>
+
+  <%= image_tag @contato.avatar.url(:medium) %>
+</p>
+
+
+
 <%= link_to 'Edit', edit_contato_path(@contato) %> |
 <%= link_to 'Back', contatos_path %>
