@@ -4,7 +4,11 @@ class ContatosController < ApplicationController
   # GET /contatos
   # GET /contatos.json
   def index
-    @contatos = Contato.all
+    if params[:search]
+        @contatos = Contato.search(params[:search])
+    else
+      @contatos = Contato.all
+    end
   end
 
   # GET /contatos/1

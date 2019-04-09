@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Contatos</h1>
+
+<%= form_tag(contatos_path, :method => :get) do %>
+<%= text_field_tag 'search', nil, placeholder: 'Buscar contato'%>
+<%= submit_tag "Buscar" %>
+<% end %>
 
 <table>
   <thead>
