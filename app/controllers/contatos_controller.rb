@@ -14,7 +14,7 @@ class ContatosController < ApplicationController
   # GET /contatos/1
   # GET /contatos/1.json
   def show
-  end
+  end 
 
   # GET /contatos/new
   def new

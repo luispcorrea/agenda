@@ -10,6 +10,8 @@ class Contato < ApplicationRecord
 
  	def self.search(query)
  		where("nome like ?", "%#{query}%")
+
+ 		
  	end
 
  	
