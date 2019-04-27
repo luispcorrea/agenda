@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
 <%= form_with(model: contato, local: true, multipart: true ) do |form| %>
   <% if contato.errors.any? %>
     <div id="error_explanation">
@@ -13,31 +14,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+ <div class=col-sm-6>
+
+  <div class="row">
     <%= form.label :nome %>
     <%= form.text_field :nome %>
   </div>
 
-  <div class="field">
+  <div class="row">
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
+  <div class="row">
     <%= form.label :celular %>
     <%= form.text_field :celular %>
   </div>
+  
   
   <div class="avatar">
  <%= form.file_field :avatar %>
   </div>
 
-</br>
 
-  <div class="actions,btn btn-dark">
-    <%= form.submit %>
+  <div class="actions">
+    <%= form.button "Salvar"%>
   </div>
-
+</div>
   
 <% end %>
 

@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Contatos <span class="badge badge-pill badge-dark">Detalhes</span> </h1>
 <p>
   <strong>Nome:</strong>
   <%= @contato.nome %>
@@ -25,5 +26,5 @@
 
 
 
-<%= link_to 'Edit', edit_contato_path(@contato) %> |
-<%= link_to 'Back', contatos_path %>
+<%= link_to 'Edit', edit_contato_path(@contato) , class: 'btn btn-info'%> 
+<%= link_to 'Back', contatos_path, class: 'btn btn-info' %>

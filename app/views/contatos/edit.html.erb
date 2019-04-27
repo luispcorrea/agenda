@@ -1,7 +1,6 @@
-<h1>Editing Contato</h1>
+<h1>Contato <span class="badge badge-pill badge-dark">Editar</span> </h1>
 
 <%= render 'form', contato: @contato %>
 
-<%= link_to 'Show', @contato %> |
-<%= link_to 'Back', contatos_path %>
-
+<%= link_to 'Show', @contato , class: 'btn btn-info' %> 
+<%= link_to 'Back', contatos_path , class: 'btn btn-info'%>
