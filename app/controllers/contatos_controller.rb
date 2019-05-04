@@ -1,5 +1,6 @@
 class ContatosController < ApplicationController
   before_action :set_contato, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /contatos
   # GET /contatos.json
@@ -76,3 +77,4 @@ class ContatosController < ApplicationController
       params.require(:contato).permit(:nome, :email, :celular, :avatar)
     end
 end
+2341231

@@ -35,10 +35,21 @@
         </div>
       </li>
     </ul>
+  
     <form class="form-inline my-2 my-md-0">
-      <input class="form-control" type="text" placeholder="Search">
+    <input class="form-control" type="text" placeholder="Search"> 
     </form>
-  </div>
+  <% if user_signed_in? %>
+     <%= current_user.email %>
+   <%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+  
+  <% else %>
+  
+  <li><%= link_to 'Cadastrar Usuario', new_user_registration_path %></li>
+  
+  <li><%= link_to 'Login', new_user_session_path %></li>
+<% end %>
+   </div>
 </nav>
 
   </head>
